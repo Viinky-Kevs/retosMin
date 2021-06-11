@@ -118,7 +118,7 @@ for i in entry_cities:
                 elif ICA > 300: ## Marrón
                     ica.append(ICA)
                     marron.append(1)
-            elif 425 < e <= 505:
+            elif 425 <= e < 505:
                 II = 301
                 IH = 400
                 BPI = 425
