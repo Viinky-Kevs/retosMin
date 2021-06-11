@@ -58,84 +58,84 @@ for i in entry_cities:
     marron = []
     
     for e in c:
-            if 0 <= e < 55:
-                II = 0
-                IH = 50
-                BPI = 0
-                BPH = 54
-                ICA = ((IH - II) / (BPH - BPI)) * (e - BPI) + II
-                if 0 <= ICA <= 50: ## Verde
-                    ica.append(ICA)
-                    verde.append(1)
-                elif 50 < ICA <= 100: ## Amarillo
-                    ica.append(ICA)
-                    amarillo.append(1)
-            elif 55 <= e < 155:
-                II = 51
-                IH = 100
-                BPI = 55
-                BPH = 154
-                ICA = ((IH - II) / (BPH - BPI)) * (e - BPI) + II
-                if 50 < ICA <= 100: ## Amarillo
-                    ica.append(ICA)
-                    amarillo.append(1)
-                elif 100 < ICA <= 150: ## Naranja
-                    ica.append(ICA)
-                    naranja.append(1)
-            elif 155 <= e < 255:
-                II = 101
-                IH = 150
-                BPI = 155
-                BPH = 254
-                ICA = ((IH - II) / (BPH - BPI)) * (e - BPI) + II
-                if 100 < ICA <= 150: ## Naranja
-                    ica.append(ICA)
-                    naranja.append(1)
-                elif 150 < ICA <= 200: ## Rojo
-                    ica.append(ICA)
-                    rojo.append(1)
-            elif 255 <= e < 355:
-                II = 151
-                IH = 200
-                BPI = 255
-                BPH = 354
-                ICA = ((IH - II) / (BPH - BPI)) * (e - BPI) + II
-                if 150 < ICA <= 200: ## Rojo
-                    ica.append(ICA)
-                    rojo.append(1)
-                elif 200 < ICA <= 300: ## Morado
-                    ica.append(ICA)
-                    morado.append(1)
-            elif 355 <= e < 425:
-                II = 201
-                IH = 300
-                BPI = 355
-                BPH = 424
-                ICA = ((IH - II) / (BPH - BPI)) * (e - BPI) + II
-                if 200 < ICA <= 300: ## Morado
-                    ica.append(ICA)
-                    morado.append(1)
-                elif ICA > 300: ## Marrón
-                    ica.append(ICA)
-                    marron.append(1)
-            elif 425 <= e < 505:
-                II = 301
-                IH = 400
-                BPI = 425
-                BPH = 504
-                ICA = ((IH - II) / (BPH - BPI)) * (e - BPI) + II
-                if ICA > 300: ## Marrón
-                    ica.append(ICA)
-                    marron.append(1)
-            elif 505 <= e < 605:
-                II = 401
-                IH = 500
-                BPI = 505
-                BPH = 604
-                ICA = ((IH - II) / (BPH - BPI)) * (e - BPI) + II
-                if ICA > 300: ## Marrón
-                    ica.append(ICA)
-                    marron.append(1)
+        if 0 <= e < 55:
+            II = 0
+            IH = 50
+            BPI = 0
+            BPH = 54
+            ICA = ((IH - II) / (BPH - BPI)) * (e - BPI) + II
+            if 0 <= ICA <= 50: ## Verde
+                ica.append(ICA)
+                verde.append(1)
+            elif 50 < ICA <= 100: ## Amarillo
+                ica.append(ICA)
+                amarillo.append(1)
+        elif 55 <= e < 155:
+            II = 51
+            IH = 100
+            BPI = 55
+            BPH = 154
+            ICA = ((IH - II) / (BPH - BPI)) * (e - BPI) + II
+            if 50 < ICA <= 100: ## Amarillo
+                ica.append(ICA)
+                amarillo.append(1)
+            elif 100 < ICA <= 150: ## Naranja
+                ica.append(ICA)
+                naranja.append(1)
+        elif 155 <= e < 255:
+            II = 101
+            IH = 150
+            BPI = 155
+            BPH = 254
+            ICA = ((IH - II) / (BPH - BPI)) * (e - BPI) + II
+            if 100 < ICA <= 150: ## Naranja
+                ica.append(ICA)
+                naranja.append(1)
+            elif 150 < ICA <= 200: ## Rojo
+                ica.append(ICA)
+                rojo.append(1)
+        elif 255 <= e < 355:
+            II = 151
+            IH = 200
+            BPI = 255
+            BPH = 354
+            ICA = ((IH - II) / (BPH - BPI)) * (e - BPI) + II
+            if 150 < ICA <= 200: ## Rojo
+                ica.append(ICA)
+                rojo.append(1)
+            elif 200 < ICA <= 300: ## Morado
+                ica.append(ICA)
+                morado.append(1)
+        elif 355 <= e < 425:
+            II = 201
+            IH = 300
+            BPI = 355
+            BPH = 424
+            ICA = ((IH - II) / (BPH - BPI)) * (e - BPI) + II
+            if 200 < ICA <= 300: ## Morado
+                ica.append(ICA)
+                morado.append(1)
+            elif ICA > 300: ## Marrón
+                ica.append(ICA)
+                marron.append(1)
+       elif 425 <= e < 505:
+            II = 301
+            IH = 400
+            BPI = 425
+            BPH = 504
+            ICA = ((IH - II) / (BPH - BPI)) * (e - BPI) + II
+            if ICA > 300: ## Marrón
+                ica.append(ICA)
+                marron.append(1)
+       elif 505 <= e < 605:
+            II = 401
+            IH = 500
+            BPI = 505
+            BPH = 604
+            ICA = ((IH - II) / (BPH - BPI)) * (e - BPI) + II
+            if ICA > 300: ## Marrón
+                ica.append(ICA)
+                marron.append(1)
     
     mean_i = np.mean(ica)
     std_i = np.std(ica)
