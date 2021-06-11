@@ -6,6 +6,7 @@ Created on Fri Jun 11 14:54:36 2021
 
 import numpy as np
 import pandas as pd
+import statistics as sta
 
 data = pd.read_csv("data.csv")
 
@@ -35,7 +36,7 @@ for i in entry_cities:
         c.append(j)
     
     mean_c = np.mean(c)
-    std_c = np.std(c)
+    std_c = sta.stdev(c)
     minimum_c_1 = np.argmin(c)
     maximum_c_1 = np.argmax(c)
     
@@ -138,7 +139,7 @@ for i in entry_cities:
                 marron.append(1)
     
     mean_i = np.mean(ica)
-    std_i = np.std(ica)
+    std_i = sta.stdev(ica)
     minimum_i_1 = np.argmin(ica)
     maximum_i_1 = np.argmax(ica)
     
