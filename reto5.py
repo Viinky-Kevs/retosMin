@@ -13,15 +13,16 @@ data = pd.read_csv("data.csv")
 cities = pd.DataFrame(data)
 
 cities_in = input().split()
-cities_in = sorted(cities_in)
 
 entry_cities = []
 
 for i in cities_in:
     num = int(i)
     entry_cities.append(num)
+    
+sorted_entry = sorted(entry_cities)
 
-for i in entry_cities:
+for i in sorted_entry:
     select_city = cities.loc[cities["id_city"] == i]
     measurement = select_city["measurement"]
     city_name = select_city["city_name"]
